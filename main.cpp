@@ -6,7 +6,7 @@
 
 int main(){
     std::cout << "Hello in Mashalab3" << std::endl;
-    std::cout << "My lab about order relation" << std::endl;
+    std::cout << "My lab is about order relation" << std::endl;
 
     int n = 0;
     std::cout << "Enter amount object:" << std::endl;
@@ -20,11 +20,11 @@ int main(){
         do{
             std::cin >> m;
             if(m >= n){
-                std::cerr << "Warning, this is object not exist" << std::endl;
+                std::cerr << "Warning, object doesn't exist" << std::endl;
             } else if (m >= 0) {
                 strcNeib p = {m, 0};
                 if(!(std::find(neib.begin(), neib.end(), p) == neib.end())){
-                    std::cerr << "Warning, this is object has already added" << std::endl;
+                    std::cerr << "Warning, object has been already added" << std::endl;
                     continue;
                 } else {
                     neib.push_back(p);
@@ -46,7 +46,7 @@ int main(){
     do{
         std::cin >> m;
         if(m >= n){
-            std::cerr << "Warning, this is object not exist" << std::endl;
+            std::cerr << "Warning, object doesn't exist" << std::endl;
         } else if ( m >= 0) {
             search.insert(m);
         }
@@ -76,13 +76,13 @@ int main(){
     }
 
     if(indsup == n){
-        std::cout << "Sup not found" << std::endl;
+        std::cout << "Sup wasn't found" << std::endl;
     } else {
         std:: cout << "Sup(X) = " << top[indsup] << std::endl;
         if(!(search.find(top[indsup]) == search.end())){
             std::cout << "Max(X) = " << top[indsup] << std::endl;
         }else {
-            std::cout << "Max not found" << std::endl;
+            std::cout << "Max wasn't found" << std::endl;
         }
     }
 
@@ -108,13 +108,13 @@ int main(){
     }
 
     if(indinf < 0){
-        std::cout << "Inf not found" << std::endl;
+        std::cout << "Inf wasn't found" << std::endl;
     } else {
         std:: cout << "Inf(X) = " << top[indinf] << std::endl;
         if(!(search.find(top[indinf]) == search.end())){
             std::cout << "Min(X) = " << top[indinf] << std::endl;
         }else {
-            std::cout << "Min not found" << std::endl;
+            std::cout << "Min wasn't found" << std::endl;
         }
     }
 
