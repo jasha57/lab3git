@@ -9,7 +9,7 @@ int main(){
     std::cout << "My lab is about order relation" << std::endl;
 
     int n = 0;
-    std::cout << "Enter amount object:" << std::endl;
+    std::cout << "Enter amount of objects:" << std::endl;
     std::cin >> n;
 
     Model<int> rel(n);
